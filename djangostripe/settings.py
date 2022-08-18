@@ -58,7 +58,7 @@ ROOT_URLCONF = 'djangostripe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,8 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51LN8W3Gs4rtxgJDu9cAoxdiUQBMuBXlTzRjSwAXMP1FiQry0YGsX2yOB7gRSo29p2qixqLIShTvPSjGKRc4ZI7Nq00XGdMzMVX'
+STRIPE_SECRET_KEY = 'sk_test_51LN8W3Gs4rtxgJDucPzyjY8mdSdMYgwchPGhf8o0xoiEGUHBhVNJNJnk7fK28MR8hSpMw83MPcmtnCafS1szlH3u004Nc3xNsu'
