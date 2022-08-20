@@ -8,6 +8,12 @@ import stripe
 class HomePageView(TemplateView):
   template_name = 'home.html'
 
+class SuccessView(TemplateView):
+    template_name = 'success.html'
+
+class CancelledView(TemplateView):
+    template_name = 'cancelled.html'
+
 @csrf_exempt
 def stripe_config(request):
     if request.method == 'GET':
